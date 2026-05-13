@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" class="">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="../public/logop.png" />
+    <link rel="stylesheet" href="../style.css" />
+    <script type="module" src="../scripts/darknode.js"></script>
+    <script type="module" src="../scripts/Practica-Calificada-5.js"></script>
+    <title>miniproyecto</title>
+</head>
+
+<body id="body" class="bg-[#e0e8ff] dark:bg-gray-900 min-h-screen flex justify-center items-center flex-col gap-6">
+    <button id="btndark" class="bg-gray-700 text-white py-2 px-4 rounded-full hover:bg-gray-600">
+        <span class="block dark:hidden">🌙</span>
+        <span class="hidden dark:block">☀️</span></button>
+    <main class="bg-white dark:bg-gray-500 rounded-3xl max-w-100 overflow-hidden shadow">
+        <img src="../public/illustration-hero.svg" alt="Hero Illustration" />
+        <section class="p-8 flex justify-center items-center flex-col gap-3">
+            <h1 class="dark:text-blue-400">Order Summary</h1>
+            <p class="text-center text-[#7280a7] dark:text-white"> You can now listen to millions of songs, audiobooks,
+                and podcasts on
+                any
+                device anywhere
+                you like!</p>
+            <div class="bg-[#f5f7ff] flex gap-5 p-6 rounded-2xl">
+                <img src="../public/icon-music.svg" alt="icon-music" />
+                <div class="flex flex-col">
+                    <span class="font-bold">Anual Plan</span>
+                    <span class="text-[#7280a7]"> $59.99/year</span>
+                </div>
+                <button
+                    class="nl-7 underline text-blue-700 font-bold active:text-blue-400 active:no-underline cursor-pointer">Change</button>
+            </div>
+            <button class="bg-blue-700 text-white py-3 px-22 rounded-2xl hover:bg-blue-400 cursor-pointer"> Proceed to
+                Payment</button>
+            <button class="text-[#7280a7] dark:text-white hover:text-black cursor-pointer "> Cancel Order</button>
+        </section>
+    </main>
+
+</body>
+
+</html>
