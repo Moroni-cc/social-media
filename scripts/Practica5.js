@@ -18,21 +18,22 @@ let nota1 = parseFloat(prompt("Ingrese la primera nota (0-100):"));
 let nota2 = parseFloat(prompt("Ingrese la segunda nota (0-100):"));
 let nota3 = parseFloat(prompt("Ingrese la tercera nota (0-100):"));
 let nota4 = parseFloat(prompt("Ingrese la cuarta nota (0-100):"));
-let promedio = (nota1 + nota2 + nota3 + nota4) / 4;
-let mensaje;
-if (promedio >= 90) {
-    mensaje = "Excelente";
+let promedio1 = (nota1 + nota2 + nota3 + nota4) / 4;
+let mensaje1;
+
+if (nota1 < 0 || nota1 > 100 || nota2 < 0 || nota2 > 100 || nota3 < 0 || nota3 > 100 || nota4 < 0 || nota4 > 100) {
+    alert("Por favor, ingrese notas válidas entre 0 y 100.");
+} else if (promedio1 >= 90) {
+    mensaje1 = "Excelente";
+} else if (promedio1 >= 75) {
+    mensaje1 = "Bueno";
+} else if (promedio1 >= 60) {
+    mensaje1 = "Regular";
+} else {
+    mensaje1 = "Insuficiente";
 }
-else if (promedio >= 75) {
-    mensaje = "Bueno";
-}
-else if (promedio >= 60) {
-    mensaje = "Regular";
-}
-else {
-    mensaje = "Insuficiente";
-}
-alert(` El promedio es ${promedio.toFixed(2)} - Su rendimiento es: ${mensaje}`);
+
+alert(` El promedio es ${promedio1.toFixed(2)} - Su rendimiento es: ${mensaje1}`);
 
 /* Ejercicio 2 – Calculadora de Tarifa de Transporte
 El programa debe pedir al usuario:
@@ -50,40 +51,41 @@ Si el viaje es mayor a 30 km, se agrega un 10% adicional al total
 Instrucciones:
 Usa condiciones anidadas (if, else if, else) y operadores lógicos para determinar el costo final.*/
 
-let edad = parseInt(prompt("Ingrese su edad:"));
+let edad2 = parseInt(prompt("Ingrese su edad:"));
 let esEstudiante = prompt("¿Es usted estudiante? (sí/no):").toLowerCase();
 let distancia = parseFloat(prompt("Ingrese la distancia a recorrer (km):"));
 
 const precioBase = 10;
 let tarifa;
 
-if (edad < 18) {
-    tarifa = precioBase * 0.50;
-} else if (edad > 60) {
-    tarifa = precioBase * 0.40;
-} else if (esEstudiante === "sí" || esEstudiante === "si") {
-    tarifa = precioBase * 0.75;
-} else {
+if (edad2 < 18) {
+    if (esEstudiante === "si") {
+        tarifa = precioBase * 0.75;
+    } else {
+        tarifa = precioBase * 0.50;
+    }
+} else if (edad2 >= 18) {
     tarifa = precioBase;
+} else if (edad2 >= 60) {
+    tarifa = precioBase * 0.40;
 }
 
 if (distancia > 30) {
-    tarifa += tarifa * 0.10;
+    tarifa = tarifa * 1.10;
 }
-
-alert(`El costo final de su viaje es: $${tarifa.toFixed(2)}`);
+alert(`La tarifa de transporte es: $${tarifa.toFixed(2)}`);
 
 /* Ejercicio 3 – Menú de Conversión de Unidades
 Muestra un menú con 4 opciones:
-
+ 
 Convertir de Celsius a Fahrenheit
 Convertir de Fahrenheit a Celsius
 Convertir de Metros a Kilómetros
 Convertir de Kilómetros a Metros
-
+ 
 El usuario debe elegir una opción y escribir el valor a convertir.
 El programa mostrará el resultado correspondiente.
-
+ 
 Instrucciones:
 Usa switch-case para realizar las conversiones y prompt() para las entradas.*/
 
@@ -106,7 +108,7 @@ switch (opcion) {
     case "3":
         resultado = valor / 1000;
         alert(`${valor} metros son ${resultado.toFixed(2)} kilómetros`);
-        break;
+        break; 2
     case "4":
         resultado = valor * 1000;
         alert(`${valor} kilómetros son ${resultado.toFixed(2)} metros`);
@@ -118,66 +120,69 @@ switch (opcion) {
 
 /* Ejercicio 4 – Sistema de Descuentos en una Tienda
 El usuario debe ingresar:
-
+ 
 El precio total de su compra
 Si tiene tarjeta de cliente frecuente (“sí” o “no”)
-
+ 
 Reglas:
-
+ 
 Si el total es mayor a 500, aplica un 10% de descuento
 Si además tiene tarjeta, aplica un 5% adicional
 Si el total es menor o igual a 100, aplica un recargo del 5%
 El programa debe mostrar el precio final y un mensaje indicando qué descuento se aplicó.
-
+ 
 Instrucciones:
 Utiliza operadores de asignación y condiciones anidadas para determinar el total.*/
 
 let totalCompra = parseFloat(prompt("Ingrese el total de su compra:"));
 let tieneTarjeta = prompt("¿Tiene tarjeta? (sí/no):").toLowerCase();
 let totalFinal = totalCompra;
-let mensaje = "No se aplicaron descuentos.";
+let mensaje4 = "No se aplicaron descuentos.";
 
 if (totalCompra > 500) {
     totalFinal -= totalCompra * 0.10;
-    mensaje = "Descuento del 10% aplicado.";
+    mensaje4 = "Descuento del 10% aplicado.";
 
-    if (tieneTarjeta === "sí" || tieneTarjeta === "si") {
+    if (tieneTarjeta === "si") {
         totalFinal -= totalCompra * 0.05;
-        mensaje = "Descuento del 10% + 5% por tarjeta aplicado.";
+        mensaje4 = "Descuento del 10% + 5% por tarjeta aplicado.";
     }
 } else if (totalCompra <= 100) {
     totalFinal += totalCompra * 0.05;
-    mensaje = "Se aplicó un recargo del 5% por compra mínima.";
+    mensaje4 = "Se aplicó un recargo del 5% por compra mínima.";
 }
 
-alert(`Total: $${totalFinal.toFixed(2)}. ${mensaje}`);
+alert(`Total: $${totalFinal.toFixed(2)}. ${mensaje4}`);
 
 /* Ejercicio 5 – Calculadora de Edad y Etapa de Vida
 Pide al usuario:
-
+ 
 Su año de nacimiento
 El año actual
-
+ 
 Calcula su edad y muestra un mensaje según el rango:
-
+ 
 Menor de edad: menos de 18 años
 Adulto joven: entre 18 y 30 años
 Adulto: entre 31 y 59 años
 Adulto mayor: 60 años o más
-
+ 
 BONUS:
 Pregunta además si ya cumplió años este año (“sí” o “no”) y ajusta la edad si es necesario.
-
+ 
 Instrucciones:
 Usa operadores de comparación, if-else-if, y parseInt() para convertir los datos numéricos.*/
 
 let añoNacimiento = parseInt(prompt("Ingrese su año de nacimiento:"));
 let añoActual = parseInt(prompt("Ingrese el año actual:"));
-let cumplióAños = prompt("¿Ya cumplió años este año? (sí/no):").toLowerCase();
+let cumplioAnios = prompt("¿Ya cumplió años este año? (sí/no):").toLowerCase();
+
 let edad = añoActual - añoNacimiento;
-if (cumplióAños === "no") {
+
+if (cumplioAnios === "no") {
     edad -= 1;
 }
+
 let etapaVida;
 if (edad < 18) {
     etapaVida = "Menor de edad";
