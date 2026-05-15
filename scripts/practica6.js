@@ -1,18 +1,23 @@
-// Practica 6 - Banco Virtual
-// Autor: Raul Moroni Capcha Cadillo
-// Hola Profesor Diego :)
-// Espero que este teniendo un buen día.
+/* 
+Practica 6 - Banco Virtual
+Autor: Raul Moroni Capcha Cadillo
+Hola Profesor Diego :)
+Espero que este teniendo un buen día. 
+*/
 
-//                 _ _.-'`-._ _
-//                ;.'________'.;
-//     _________n.[____________].n_________
-//    |""_""_""_""||==||==||==||""_""_""_""]
-//    |"""""""""""||..||..||..||"""""""""""|
-//    |LI LI LI LI||LI||LI||LI||LI LI LI LI|
-//    |.. .. .. ..||..||..||..||.. .. .. ..|
-//    |LI LI LI LI||LI||LI||LI||LI LI LI LI|
-// ,,;;,;;;,;;;,;;;,;;;,;;;,;;;,;;,;;;,;;;,;;,,
-// ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+/*
+                 _ _.-'`-._ _
+                ;.'________'.;
+     _________n.[____________].n_________
+    |""_""_""_""||==||==||==||""_""_""_""]
+    |"""""""""""||..||..||..||"""""""""""|
+    |LI LI LI LI||LI||LI||LI||LI LI LI LI|
+    |.. .. .. ..||..||..||..||.. .. .. ..|
+    |LI LI LI LI||LI||LI||LI||LI LI LI LI|
+ ,,;;,;;;,;;;,;;;,;;;,;;;,;;;,;;,;;;,;;;,;;,,
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+*/
 
 // ╔════════════════════════════════════════╗
 // ║     BANCO VIRTUAL - MORONI CAPCHA      ║
